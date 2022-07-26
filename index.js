@@ -1,9 +1,25 @@
-var person = {
-    name: 'Max',
-    age: 28,
-    job: 'Frontend'
+var createCounter = function(counterName){
+    var counter = 0
+
+    return {
+       increment: function () {
+        counter++
+       },
+       decrement: function () {
+        counter--
+        },
+       getCounter: function () {
+        return counter
+        }
+    }
 }
 
-Object.keys(person).forEach(function (key) {
-  console.log(person[key]) 
-})
+var counterA = createCounter ('Counter A')
+var counterB = createCounter ('Counter B') 
+
+ counterA.increment()
+ counterA.increment()
+ counterA.increment()
+
+ counterB.decrement()
+ counterB.decrement()
