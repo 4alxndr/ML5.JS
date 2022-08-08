@@ -1,21 +1,34 @@
-
-// for (let i = 0; i < 5; i++) {
-//     setTimeout(function () {
-//         console.log(i)
-//     }, 2000) 
+// function getAge(year) {
+//     const current = new Date().getFullYear()
+//     return current - year
 // }
 
-const HEX = '#FFAABB'
 
-const array = [1, 2]
 
-const obj = {a: 1}
+// const calculateAge = (year) => {
+//     const current = new Date().getFullYear()
+//     return current - year
+// }
 
- array.unshift(4)
+// const getAge = year => {
+//     const current = new Date().getFullYear()
+//     return current - year
+// }
 
- obj.b = 2
+// const getAge = year => new Date().getFullYear() - year
 
- console.log(array)
- console.log(obj)
+// const logAge = year => console.log(new Date().getFullYear() - year)
 
-document.querySelector('h1').style.color = HEX
+// logAge(1951)
+
+// console.log(getAge(1987))
+
+    const person = {
+        age: 25,
+        firstName: 'Maxim',
+        logNameWithTimeout() {
+            window.setTimeout(() => {
+                console.log(this.firstName)
+            }, 1000)
+        }
+    }
