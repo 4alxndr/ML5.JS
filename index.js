@@ -1,19 +1,25 @@
-//  старый способ условия
-// const createPost = (title, text, date) => {
-//     date = date || new Date().toLocaleDateString()
-//     return  {
-//         title: title,
-//         text: text,
-//         date: date
-//     }
-// }
+const createCar = (name, model) => ({name, model})
 
-// const post = createPost('Скоро новый год!', 'Скоро будет 2023!')
-// console.log(post)
+const ford = createCar('Ford', 'Focus')
 
-const createPost = (title, text = 'Default text', date = new Date().toLocaleDateString()) => {    
-        return  {title, text, date}
-     }
-    
-     const post = createPost('Скоро новый год!')
-     console.log(post)
+console.log(ford)
+
+const yearField = 'year'
+
+const bmw = {
+        name: 'BMW',
+        ['model']: 'X6 Sport',
+        [yearField]: 2022,
+
+        logFiealds () {
+                const {name, year, model} = this
+                console.log(name, model, year)
+        }
+}
+
+console.log(bmw)
+bmw.logFiealds()
+
+// const year = bmw.year
+const {year} = bmw
+console.log(year)
